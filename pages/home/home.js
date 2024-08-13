@@ -1,66 +1,26 @@
-// pages/home/home.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
-  data: {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad(options) {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide() {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload() {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh() {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom() {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage() {
-
-  }
+    data:{
+        name:'pvd',
+        age:18,
+        students:[
+            {id:1,name:'pvd',age:18},
+            {id:2,name:'pvd1',age:19},
+            {id:3,name:'pvd2',age:20},
+            {id:4,name:'pvd3',age:21}
+        ],
+        counter:0
+    },
+    hedleBtnClick(){
+        // console.log('+1')
+        // this.counter++
+        this.setData({
+            counter:this.data.counter+1  //setData的方法传递一个字面量对象  属性：传入当前data中的数据
+        })
+    },
+    hedleSubClick(){
+        // console.log('-1')
+        this.setData({
+            counter:this.data.counter-1
+        })
+    }
 })
